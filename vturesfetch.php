@@ -11,7 +11,4 @@ $results=$pieces[245];
 //echo $results;
 //echo sizeof($pieces);
 echo $results;
-//echo "<br>DEBUG = ".$pieces[0];
-
-
 ?>
