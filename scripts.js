@@ -66,7 +66,7 @@ function display(t)
   if(t>0)
     window.setTimeout("display("+t+")",1000);
   if(t==0)
-    window.setTimeOut("search()",100);
+    window.setTimeout("search()",100);
 }
 function display2(t)
 {
@@ -76,7 +76,7 @@ function display2(t)
   if(t>0)
     window.setTimeout("display2("+t+")",1000);
   if(t==0)
-    window.setTimeOut("search()",100);
+    window.setTimeout("search()",100);
 }
 function playSound(filename)
 {   
