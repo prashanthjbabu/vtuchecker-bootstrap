@@ -1,5 +1,11 @@
+var timeoutstr=null;
 function search()
 {
+  if(timeoutstr!=null)
+  {
+    clearTimeout(timeoutstr);
+  }
+
   var usn=document.getElementById("usn");
   $("#loading").show();
   document.getElementById("myDiv").innerHTML="";
@@ -69,10 +75,10 @@ function display(t)
   document.getElementById("myDiv").innerHTML="<p class=\"lead\" align=\"justify\">Results are <font color=red>NOT YET AVAILABLE</font> for USN <font color=green>"+usn.value+"</font> . Trying again in <font color=blue>"+t+"</font> seconds</p>";
   t=t-1;
   if(t>0)
-    window.setTimeout("display("+t+")",1000);
+    timeoutstr=window.setTimeout("display("+t+")",1000);
   if(t==0)
   {
-    window.setTimeout("search()",1000);
+    timeoutstr=window.setTimeout("search()",1000);
   }
 
 }
@@ -82,10 +88,10 @@ function display2(t)
   t=t-1;
   document.getElementById("myDiv").innerHTML="<p class=\"lead\" align=\"justify\">Error communicating with VTU Server for USN <font color=green>"+usn.value+"</font> . Trying again in <font color=blue>"+t+"</font> seconds</p>";
   if(t>0)
-    window.setTimeout("display2("+t+")",1000);
+    timeoutstr=window.setTimeout("display2("+t+")",1000);
   if(t==0)
   {
-    window.setTimeout("search()",1000);
+    timeoutstr=window.setTimeout("search()",1000);
   }
     
 }
