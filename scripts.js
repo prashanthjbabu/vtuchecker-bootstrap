@@ -1,4 +1,3 @@
-<script>
 function search()
 {
   var usn=document.getElementById("usn");
@@ -90,4 +89,3 @@ $(document).ready(function()
     document.getElementById("myDiv").innerHTML="";
   });
 });
-</script>
