@@ -2,6 +2,7 @@ function search()
 {
   var usn=document.getElementById("usn");
   $("#loading").show();
+  document.getElementById("myDiv").innerHTML="";
   var xmlhttp;
   if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -67,8 +68,7 @@ function display(t)
     window.setTimeout("display("+t+")",1000);
   if(t==0)
   {
-    document.getElementById("myDiv").innerHTML="";
-    window.setTimeout("search()",100);
+    window.setTimeout("search()",1000);
   }
 
 }
@@ -81,8 +81,7 @@ function display2(t)
     window.setTimeout("display2("+t+")",1000);
   if(t==0)
   {
-    document.getElementById("myDiv").innerHTML="";
-    window.setTimeout("search()",100);
+    window.setTimeout("search()",1000);
   }
     
 }
