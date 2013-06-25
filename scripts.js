@@ -7,6 +7,7 @@ function search()
     running="false";  
     return;
   }
+  alert("hello");
   running="true";
   var usn=document.getElementById("usn");
   $("#loading").show();
