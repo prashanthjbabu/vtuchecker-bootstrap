@@ -81,7 +81,7 @@ function playSound(filename)
 $(document).ready(function()
 {
   $("#loading").hide();
-  $("button").click(function()
+  $("#res").click(function()
   {
     $("#loading").show();
     document.getElementById("myDiv").innerHTML="";
