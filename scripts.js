@@ -1,14 +1,5 @@
-var running="false";
 function search()
 {
-  if(running=="true")
-  {
-    alert("already running");
-    running="false";  
-    return;
-  }
-  alert("hello");
-  running="true";
   var usn=document.getElementById("usn");
   $("#loading").show();
   var xmlhttp;
@@ -69,8 +60,6 @@ function search()
 }
 function display(t)
 {
-  if(running=="false")
-    document.getElementById("myDiv").innerHTML="";
   var usn=document.getElementById("usn");
   t=t-1;
   document.getElementById("myDiv").innerHTML="<p class=\"lead\" align=\"justify\">Results are <font color=red>NOT YET AVAILABLE</font> for USN <font color=green>"+usn.value+"</font> . Trying again in <font color=blue>"+t+"</font> seconds</p>";
@@ -79,8 +68,6 @@ function display(t)
 }
 function display2(t)
 {
-  if(running=="false")
-    document.getElementById("myDiv").innerHTML="";
   var usn=document.getElementById("usn");
   t=t-1;
   document.getElementById("myDiv").innerHTML="<p class=\"lead\" align=\"justify\">Error communicating with VTU Server for USN <font color=green>"+usn.value+"</font> . Trying again in <font color=blue>"+t+"</font> seconds</p>";
