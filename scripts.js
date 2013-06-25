@@ -26,7 +26,7 @@ function search()
         }
        else if(xmlhttp.responseText.length!=0)
         {
-          document.getElementById("myDiv").innerHTML="<h1>Result ARE <font color=red>OUT</font> for USN < font color=green>"+usn.value+"</font></h1>"+xmlhttp.responseText;
+          document.getElementById("myDiv").innerHTML="<h1>Result ARE <font color=red>OUT</font> for USN <font color=green>"+usn.value+"</font></h1>"+xmlhttp.responseText;
           $("#loading").hide();
           playSound('bing');
         }
