@@ -21,7 +21,8 @@ function search()
         if(n!=null)
         {
           //document.getElementById("myDiv").innerHTML="<p class=\"lead\" align=\"justify\">Results are <font color=red>NOT YET AVAILABLE</font> for USN <font color=green>"+usn.value+"</font> . Trying again in <font color=blue>10</font> seconds</p>";
-          window.setTimeout("display(10)",1000);
+          //window.setTimeout("display(10)",0000);
+          display(10);
           $("#loading").hide();
           //window.setTimeout("search()", 10000);
         }
@@ -34,7 +35,8 @@ function search()
        else
         {
           //document.getElementById("myDiv").innerHTML="<p class=\"lead\" align=\"justify\">Error communicating with VTU Server for USN <font color=green>"+usn.value+"</font> . Trying again in <font color=blue>10</font> seconds</p>";
-          window.setTimeout("display2(10)",1000);
+          //window.setTimeout("display2(10)",1000);
+          display2(10);
           $("#loading").hide();
           //window.setTimeout("search()", 10000);
         }
@@ -42,7 +44,8 @@ function search()
       else if(xmlhttp.readyState==4 && xmlhttp.status==404)
       {
         //document.getElementById("myDiv").innerHTML="<p class=\"lead\" align=\"justify\">Error communicating with VTU Server for USN <font color=green>"+usn.value+"</font> . Trying again in <font color=blue>10</font> seconds</p>";
-        window.setTimeout("display2(10)",1000);
+        //window.setTimeout("display2(10)",1000);
+        display2(10);
         $("#loading").hide();
         //window.setTimeout("search()", 10000);
       }
@@ -54,7 +57,8 @@ function search()
     var usn=document.getElementById("usn");
     xmlhttp.abort();
     //document.getElementById("myDiv").innerHTML="<p class=\"lead\" align=\"justify\">Error communicating with VTU Server for USN <font color=green>"+usn.value+"</font> . Trying again in <font color=blue>10</font> seconds</p>";
-    window.setTimeout("display2(10)",1000);
+    //window.setTimeout("display2(10)",1000);
+    display2(10);
     $("#loading").hide();
     //window.setTimeout("search()", 10000);
   }
