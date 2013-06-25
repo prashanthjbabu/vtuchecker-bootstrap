@@ -1,4 +1,4 @@
-var running=false;
+var running="false";
 function search()
 {
   if(running=="true")
