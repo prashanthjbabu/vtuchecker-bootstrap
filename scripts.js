@@ -3,6 +3,7 @@ function search()
 {
   if(running=="true")
   {
+    alert("already running");
     running="false";  
     return;
   }
